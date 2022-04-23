@@ -60,7 +60,7 @@
 		<description>
 			<p>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
 		</description>
-		<sheet display="false">
+		<sheet display="true">
 			<description>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</description>
 		</sheet>
 		<rules>
@@ -111,7 +111,7 @@
     <description>
       <p>Most races favor swords. Yours favor spears as the king of weapons. Spears do one damage die larger in your hands, their one-handed damage die becoming a d8, and their two-handed damage die becoming a d10. </p>
     </description>
-    <sheet display="false">
+    <sheet display="true">
       <description>Most races favor swords. Yours favor spears as the king of weapons. Spears do one damage die larger in your hands, their one-handed damage die becoming a d8, and their two-handed damage die becoming a d10. </description>
     </sheet>
     <rules>
@@ -121,7 +121,7 @@
     <description>
       <p>Since mountain fauns are well suited to difficult terrain, they ignore the extra movement cost of non-magical difficult terrain.</p>
     </description>
-    <sheet display="false">
+    <sheet display="true">
       <description>Since mountain fauns are well suited to difficult terrain, they ignore the extra movement cost of non-magical difficult terrain.</description>
     </sheet>
     <rules>
@@ -160,7 +160,7 @@
     <description>
       <p>Your legs are naturally better at jumping, your jump distance is doubled. </p>
     </description>
-    <sheet display="false">
+    <sheet display="true">
       <description>Your legs are naturally better at jumping, your jump distance is doubled. </description>
     </sheet>
     <rules>
@@ -170,7 +170,7 @@
     <description>
       <p>You have advantage on initiative rolls while in plains, grasslands and other open natural environments.</p>
     </description>
-    <sheet display="false">
+    <sheet display="true">
       <description>You have advantage on initiative rolls while in plains, grasslands and other open natural environments.</description>
     </sheet>
     <rules>
