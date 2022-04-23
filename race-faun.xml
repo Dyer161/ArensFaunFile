@@ -253,7 +253,7 @@
       <description>Fauns are naturally drawn to creating and crafting. You gain proficiency with one set of artisan tools of your choice. </description>
     </sheet>
     <rules>
-	    <select type="Proficiency" name="Artisan Tools" number="1" supports"Tools" />
+	    <select type="Proficiency" name="Artisan Tools" number="1" supports="Tools" />
     </rules>
   </element>
 	
