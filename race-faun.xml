@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Faun</name>
+		<description>Faun Race</description>
+	</info>
+
+	<element name="Faun" type="Race" source="Aren's Faun File :)" id="ID_AREN_RACE_FAUN">
+		<description>
+			<p> Cow ears and tails, horns and legs like a goat separate Fauns from humans; as well as their predisposition. These Fey-ancestry humanoids are light-hearted and prone to taking it easy. They range in height from the shortest at 3.5 feet to the tallest at just over 6, with most at about 5.5, and they run the gamut of hair colors and styles. They are native to everywhere from steep mountain ranges to deep forests to wide-open plains and have adapted to their surroundings over long periods of time. They breed often and stay fertile most of their lives, having litters of 2-8 kids every decade or so. A Faun would be most contented working as a craftsman or researcher or farmer, though their innate nimbleness makes them fantastic hunters and fighters. Half-Faun children can be born with any, or none, of their faun parent's traits, but their aptitude for creativity generally shines through.</p>
+			<h4>FAUN TRAITS</h4>
+			<p>Your Faun character has the following traits in common with all other Fauns.</p>
+			<p class="indent"><b><i>Age. </i></b>Fauns mature at about the same rate as humans, or a little slower. They can generally expect to live up to 150-200 years. </p>
+			<p class="indent"><b><i>Alignment. </i></b>Most are generally kind and gracious in nature, making them tend to be good, and do not usually stray towards either lawfulness or chaos. </p>
+			<p class="indent"><b><i>Size. </i></b>Fauns vary well in build, some being stocky and wide, others being willowy and thin. Generally, your height will be around 5 and a half feet. Your size is Medium.</p>
+			<p class="indent"><b><i>Speed. </i></b>Your base walking speed is 30 feet.</p>
+			<p class="indent"><b><i>Darkvision. </i></b>You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. </p>
+			<p class="indent"><b><i>Languages. </i></b>You can speak, read and write Common and Sylvan. </p>
+			<p class="indent"><b><i>Subrace. </i></b>Fauns differ depending on the environment they grew up in or were born into. The types of faun are Forest, Mountain, Plains, and City. </p>
+		</description>
+
+    <sheet display="false" />
+    <setters>
+      <set name="height" modifier="2d10">4'8"</set>
+      <set name="weight" modifier="2d4">110 lb.</set>
+    </setters>
+    
+		<sheet display="false" />
+		<rules>
+			<stat name="innate speed" value="30" bonus="base" />
+      <stat name="dexterity" value="2" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+      <select type="Sub Race" name="Faun Subrace" supports="Faun" />
+		</rules>
+	</element>
+
+	<!-- Forest Faun -->
+	<element name="Forest Faun" type="Sub Race" source="Aren's Faun File :)" id="ID_AREN_SUBRACE_FOREST">
+		<supports>Faun</supports>
+		<description>
+			<p>As a Forest Faun, you have a deep understanding of the great woods and their denizens both plant and animal. Your hind legs may appear more deer-like than goat-like, and your hair is likely to be brownish, with or without white spots. Bows and slings feel right in your hands and hunting comes naturally. </p>
+			<p class="indent"><b><i>Ability Score Increase. </i></b>Your Wisdom score increases by 1.</p>
+			<p class="indent"><b><i>Natural Camouflage. </i></b>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena. </p>
+			<p class="indent"><b><i>Forest Magic. </i></b>You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability for it. </p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="wisdom" value="1" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_NATURAL_CAMOUFLAGE" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_FOREST_MAGIC" />
+		</rules>
+	</element>
+	<element name="Natural Camouflage" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_NATURAL_CAMOUFLAGE">
+		<description>
+			<p>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
+		</description>
+		<sheet display="false">
+			<description>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</description>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+  <element name="Forest Magic" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_FOREST_MAGIC">
+    <description>
+      <p>You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability for it.</p>
+    </description>
+    <sheet display="false">
+      <description>You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability for it.</description>
+    </sheet>
+    <spellcasting name="Druid" ability="Wisdom">
+      <list>Druid</list>
+    </spellcasting>
+    <rules>
+      <select type="Spell" name="Cantrip (Druid)" supports="$(spellcasting:list),0" level="1" number="1" spellcasting="Druid" />
+    </rules>
+  </element>
+
+  <!-- Mountain Faun -->
+  <element name="Mountain Faun" type="Sub Race" source="Aren's Faun File :)" id="ID_AREN_SUBRACE_MOUNTAIN">
+    <supports>Faun</supports>
+    <description>
+      <p>More mountain goat than domesticated goat, these Fauns are at home on the uneven and extremely steep terrain of mountains. These Fauns tend to be deeper thinkers and scholars, preferring botany over bushcraft and animal husbandry over hunting. They still consider themselves close to nature, but they see it in an academic approach. Most of the aristocracy of this subrace will be a remnant from the old kingdoms. </p>
+      <p class="indent">
+        <b>
+          <i>Ability Score Increase. </i>
+        </b>Your Strength score increases by 1.
+      </p>
+      <p class="indent">
+        <b>
+          <i>Spear Culture </i>
+        </b>Most races favor swords. Yours favor spears as the king of weapons. Spears do one damage die larger in your hands, their one-handed damage die becoming a d8, and their two-handed damage die becoming a d10. </p>
+      <p class="indent">
+        <b>
+          <i>Nimble Footed. </i>
+        </b>Since mountain fauns are well suited to difficult terrain, they ignore the extra movement cost of non-magical difficult terrain. </p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_SPEAR_CULTURE" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_NIMBLE_FOOTED" />
+    </rules>
+  </element>
+  <element name="Spear Culture" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_SPEAR_CULTURE">
+    <description>
+      <p>Most races favor swords. Yours favor spears as the king of weapons. Spears do one damage die larger in your hands, their one-handed damage die becoming a d8, and their two-handed damage die becoming a d10. </p>
+    </description>
+    <sheet display="false">
+      <description>Most races favor swords. Yours favor spears as the king of weapons. Spears do one damage die larger in your hands, their one-handed damage die becoming a d8, and their two-handed damage die becoming a d10. </description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+  <element name="Nimble Footed" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_NIMBLE_FOOTED">
+    <description>
+      <p>Since mountain fauns are well suited to difficult terrain, they ignore the extra movement cost of non-magical difficult terrain.</p>
+    </description>
+    <sheet display="false">
+      <description>Since mountain fauns are well suited to difficult terrain, they ignore the extra movement cost of non-magical difficult terrain.</description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+
+  <!-- Plains Faun -->
+  <element name="Plains Faun" type="Sub Race" source="Aren's Faun File :)" id="ID_AREN_SUBRACE_PLAINS">
+    <supports>Faun</supports>
+    <description>
+      <p>These Fauns are more rural than their city-dwelling counterparts, preferring an agrarian lifestyle in villages or small towns farming and living off the land. Faun villages are typically communal-living arrangements of up to several hundred Fauns in houses that will contain up to 30 families each. A central living area with both sleeping and private chambers are surrounded by animal pens and fields in a radial arrangement to the other buildings. These Fauns are more antelope-like than the others, being able to jump great heights and run very fast to catch their prey and avoid becoming it. </p>
+      <p class="indent">
+        <b>
+          <i>Ability Score Increase. </i>
+        </b>Your Constitution score increases by 1.
+      </p>
+      <p class="indent">
+        <b>
+          <i>Strider. </i>
+        </b>Your legs are naturally better at jumping, your jump distance is doubled.
+        <p class="indent">
+          <b>
+            <i>See Them Coming. </i>
+          </b>You have advantage on initiative rolls while in plains, grasslands and other open natural environments.
+        </p>
+      </p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_STRIDER" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_SEE_THEM_COMING" />
+    </rules>
+  </element>
+  <element name="Strider" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_STRIDER">
+    <description>
+      <p>Your legs are naturally better at jumping, your jump distance is doubled. </p>
+    </description>
+    <sheet display="false">
+      <description>Your legs are naturally better at jumping, your jump distance is doubled. </description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+  <element name="See Them Coming" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_SEE_THEM_COMING">
+    <description>
+      <p>You have advantage on initiative rolls while in plains, grasslands and other open natural environments.</p>
+    </description>
+    <sheet display="false">
+      <description>You have advantage on initiative rolls while in plains, grasslands and other open natural environments.</description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+
+  <!-- City Faun -->
+  <element name="City Faun" type="Sub Race" source="Aren's Faun File :)" id="ID_AREN_SUBRACE_CITY">
+    <supports>Faun</supports>
+    <description>
+      <p>Centuries of civilization have taken the wild out of these Fauns. Their legs are the most goat-like, and the hair on them is much less rough than their cousins. They make good merchants and are frequently seen as traders between countries, or as spies to those less trusting of them. </p>
+      <p class="indent">
+        <b>
+          <i>Ability Score Increase. </i>
+        </b>Your Charisma score increases by 1.
+      </p>
+      <p class="indent">
+        <b>
+          <i>Extra Language. </i>
+        </b> You can speak, read, and write one extra language of your choice.
+        <p class="indent">
+          <b>
+            <i>Merchant's tounge </i>
+          </b>You have proficiency in the Persuasion skill.
+        </p>
+      </p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="charisma" value="1" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_MERCHANTS_TOUNGE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+    </rules>
+  </element>
+  <element name="Merchant's Tounge" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_MERCHANTS_TOUNGE">
+    <description>
+      <p>You can speak, read, and write one extra language of your choice. </p>
+    </description>
+    <sheet display="false">
+      <description>You can speak, read, and write one extra language of your choice. </description>
+    </sheet>
+    <rules>
+      <select type="Language" name="Merchant's Tounge" number="1" supports="Standard||Exotic||Secret" />
+    </rules>
+  </element>
+
+</elements>
