@@ -20,6 +20,9 @@
 			<p class="indent"><b><i>Darkvision. </i></b>You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. </p>
 			<p class="indent"><b><i>Languages. </i></b>You can speak, read and write Common and Sylvan. </p>
 			<p class="indent"><b><i>Subrace. </i></b>Fauns differ depending on the environment they grew up in or were born into. The types of faun are Forest, Mountain, Plains, and City. </p>
+			<p class="indent"><b><i>Fey Ancestry. </i></b>You have advantage against saving throws against being charmed, and magic can't put you to sleep. </p>
+			<p class="indent"><b><i>Trance. </i></b>Fauns sleep very lightly compared to other races, remaining semiconscious, for 4 hours a day. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep. </p>
+			<p class="indent"><b><i>Artisan Tools. </i></b>Fauns are naturally drawn to creating and crafting. You gain proficiency with one set of artisan tools of your choice. </p>
 		</description>
 
     <sheet display="false" />
@@ -30,12 +33,15 @@
     
 		<sheet display="false" />
 		<rules>
-			<stat name="innate speed" value="30" bonus="base" />
+	<stat name="innate speed" value="30" bonus="base" />
       <stat name="dexterity" value="2" />
-			<grant type="Size" id="ID_SIZE_MEDIUM" />
-			<grant type="Vision" id="ID_VISION_DARKVISION" />
-			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+	<grant type="Size" id="ID_SIZE_MEDIUM" />
+	<grant type="Vision" id="ID_VISION_DARKVISION" />
+	<grant type="Language" id="ID_LANGUAGE_COMMON" />
       <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_FEY_ANCESTRY" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_TRANCE" />
+      <grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_FAUN_ARTISANS_TOOLS" />
       <select type="Sub Race" name="Faun Subrace" supports="Faun" />
 		</rules>
 	</element>
@@ -216,5 +222,39 @@
       <select type="Language" name="Merchant's Tounge" number="1" supports="Standard||Exotic||Secret" />
     </rules>
   </element>
+	
+  <element name="Fey Ancestry" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_FEY_ANCESTRY">
+    <description>
+      <p>You have advantage against saving throws against being charmed, and magic can't put you to sleep.</p>
+    </description>
+    <sheet display="true">
+      <description>You have advantage against saving throws against being charmed, and magic can't put you to sleep.</description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
 
+  <element name="Trance" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_TRANCE">
+    <description>
+      <p>Fauns sleep very lightly compared to other races, remaining semiconscious, for 4 hours a day. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</p>
+    </description>
+    <sheet display="true">
+      <description>Fauns sleep very lightly compared to other races, remaining semiconscious, for 4 hours a day. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+	
+  <element name="Artisan Tools" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_ARTISANS_TOOLS">
+    <description>
+      <p>Fauns are naturally drawn to creating and crafting. You gain proficiency with one set of artisan tools of your choice.</p>
+    </description>
+    <sheet display="false">
+      <description>Fauns are naturally drawn to creating and crafting. You gain proficiency with one set of artisan tools of your choice. </description>
+    </sheet>
+    <rules>
+	    <select type="Proficiency" name="Artisan Tools" number="1" supports"Tools" />
+    </rules>
+  </element>
+	
 </elements>
