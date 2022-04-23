@@ -3,6 +3,9 @@
 	<info>
 		<name>Faun</name>
 		<description>Faun Race</description>
+	    	<update version="0.1">
+	     		<file name="race-faun.xml" url="https://raw.githubusercontent.com/Dyer161/ArensFaunFile/main/race-faun.xml" />
+	    	</update>
 	</info>
 
 	<element name="Faun" type="Race" source="Aren's Faun File :)" id="ID_AREN_RACE_FAUN">
