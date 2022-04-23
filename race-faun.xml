@@ -245,7 +245,7 @@
     </rules>
   </element>
 	
-  <element name="Artisan Tools" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_ARTISANS_TOOLS">
+  <element name="Artisan Tools" type="Racial Trait" source="Aren's Faun File :)" id="ID_AREN_RACIAL_TRAIT_FAUN_ARTISANS_TOOLS">
     <description>
       <p>Fauns are naturally drawn to creating and crafting. You gain proficiency with one set of artisan tools of your choice.</p>
     </description>
